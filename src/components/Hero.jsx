@@ -2,8 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import BannerImage from '../banner-imag.png'; 
 import BannerImagebg from '../bannerbgfull.png'; 
-import BannerImage1 from '../banner1.png'; 
-import BannerImage2 from '../banner2.png'; 
 export default function Hero() {
   return (
     <div className='relative'>

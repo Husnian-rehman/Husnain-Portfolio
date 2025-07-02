@@ -10,6 +10,7 @@ module.exports = {
             Neue: ['Neue Haas Grotesk Text Pro'],
         },
         colors: {
+            default: '#E46400',
             primary: '#5B5B5B', // menu link color
             secondry: '#000',
             white: '#fff',
