@@ -7,15 +7,13 @@ module.exports = {
         extend: {},
         fontFamily: {
             Poppins: ['Poppins'],
-            Neue: ['Neue Haas Grotesk Text Pro'],
         },
         colors: {
             default: '#E46400',
-            primary: '#5B5B5B', // menu link color
-            secondry: '#000',
+            primary: '#000', 
             white: '#fff',
             featurebg: '#F7F6FB',
-            featuretext: '#754EF9',
+            featuretext: '#E46400',
             description: '#818181',
             buttonColor: '#E9E9E9',
         },

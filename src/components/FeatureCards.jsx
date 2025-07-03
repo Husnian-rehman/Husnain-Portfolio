@@ -2,12 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export default function FeatureCards() {
   return (
-    <div className='py-[88px] bg-featurebg'>
-      <div className="px-5 max-w-[1460px] m-auto">
-        <span className='block text-center mb-4 text-[20px] font-medium font-Poppins text-featuretext px-[32px] py-[12px] rounded-3xl border border-primary bg-[#F7F6FB] w-fit m-auto'>MY SERVICES</span>
-        <h2 className='text-center mb-8 md:mb-16 text-[25px] md:text-[40px] font-semibold font-Poppins'>My Provided Features</h2>
+    <div className='py-[88px]'>
+      <div className="px-5 max-w-[1400px] m-auto">
+        <span className='block text-center mb-4 text-[20px] font-bold font-Poppins text-featuretext px-[32px] py-[12px] rounded-3xl border border-primary bg-[#F7F6FB] w-fit m-auto'>MY SERVICES</span>
+        <h2 className='text-center text-default mb-8 md:mb-16 text-[25px] md:text-[30px] font-semibold font-Poppins'>My Provided Features</h2>
+        
         <div className="feature-inner grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-          <div className="feature-card  flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
+          <div className="feature-card cursor-pointer flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
             <div className="svg-col mb-[10px] text-featuretext">
               <svg width="96" height="96" viewBox="0 0 96 96" className='group-hover:text-white transition-all ease-in-out duration-700' xmlns="http://www.w3.org/2000/svg">
               <path d="M37.7143 13.7143L44.5714 0H41.1428L34.2857 13.7143H37.7143Z" fill="currentColor"/>
@@ -18,21 +19,21 @@ export default function FeatureCards() {
               <path d="M92.0709 56.0144C89.5949 54.5347 86.5949 54.4711 84.0603 55.8403L61.6082 67.9098C61.084 72.1378 57.5098 75.4314 53.1429 75.4314H39.3599C38.4124 75.4314 37.6457 74.6648 37.6457 73.7173C37.6457 72.7699 38.4124 72.0032 39.3599 72.0032H53.1429C55.9788 72.0032 58.2857 69.6967 58.2857 66.8612C58.2857 64.0794 56.0619 61.82 53.3002 61.7349C52.274 61.7229 35.7054 61.719 35.7054 61.719L29.8527 55.8671C29.2098 55.2243 28.3376 54.8629 27.4286 54.8629H13.7143V89.1505H19.7679L30.8572 92.5719C35.4643 94.0533 40.392 96.0001 45.8521 96.0001C50.7891 96.0001 55.654 94.363 59.8527 91.1458L92.5045 69.536C94.6925 68.0362 96 65.5589 96 62.9141C96 60.0584 94.5318 57.4807 92.0709 56.0144Z" fill="currentColor"/>
               </svg>
             </div>
-            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[40px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
-            <p className='mb-16 text-[16px] lg:text-[20px]  font-normal font-Poppins'>
+            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[30px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
+            <p className=' text-[16px] lg:text-[20px]  font-normal font-Poppins'>
               Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.
             </p>
-              <Link to="/login" className="w-fit px-[32px] py-[12px] m-auto text-[16px] lg:text-[18px] flex gap-[10px] items-center font-medium text-white group-hover:text-featuretext bg-featuretext group-hover:bg-white rounded-[42px] transition-all ease-in-out duration-700">
+              {/* <Link to="/login" className="w-fit px-[32px] py-[12px] m-auto text-[16px] lg:text-[18px] flex gap-[10px] items-center font-medium text-white group-hover:text-featuretext bg-featuretext group-hover:bg-white rounded-[42px] transition-all ease-in-out duration-700">
                 READ MORE
               <div className="p-[5px] flex items-center text-featuretext justify-center link-svg w-6 h-6 bg-white group-hover:bg-featuretext transition-all ease-in-out duration-700 rounded-[50px]">
               <svg width="14" height="14" viewBox="0 0 11 11" className='group-hover:text-white' xmlns="http://www.w3.org/2000/svg">
               <path d="M1.72214 10.2325L9.49837 2.45625L9.48209 7.12092C9.48037 7.20366 9.49513 7.2858 9.52553 7.36254C9.55593 7.43929 9.60135 7.50911 9.65915 7.56792C9.71694 7.62674 9.78595 7.67337 9.86215 7.7051C9.93835 7.73683 10.0202 7.75303 10.103 7.75274C10.1857 7.75245 10.2677 7.73568 10.3441 7.70342C10.4205 7.67116 10.4899 7.62404 10.5481 7.56482C10.6063 7.5056 10.6522 7.43547 10.6831 7.3585C10.714 7.28154 10.7294 7.1993 10.7282 7.11657L10.7498 0.947535C10.7503 0.782294 10.6852 0.624057 10.5688 0.507621C10.4523 0.391186 10.2941 0.326086 10.1289 0.326637L3.95983 0.348162C3.79645 0.351572 3.64049 0.419008 3.52555 0.535947C3.41061 0.652887 3.34589 0.809973 3.34532 0.973371C3.34475 1.13677 3.40838 1.29341 3.52251 1.40955C3.63663 1.52569 3.79212 1.59204 3.95548 1.59431L8.62015 1.57803L0.843928 9.35426C0.726653 9.47153 0.660445 9.63027 0.659869 9.79554C0.659292 9.96081 0.724394 10.1191 0.840852 10.2355C0.957311 10.352 1.11559 10.4171 1.28086 10.4165C1.44613 10.416 1.60487 10.3497 1.72214 10.2325Z" fill="currentColor"/>
               </svg>
               </div>
-              </Link>
+              </Link> */}
           </div>
 
-          <div className="feature-card  flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
+          <div className="feature-card cursor-pointer flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
             <div className="svg-col mb-[10px] text-featuretext">
               <svg width="96" height="96" viewBox="0 0 96 96" className='group-hover:text-white transition-all ease-in-out duration-700' xmlns="http://www.w3.org/2000/svg">
               <path d="M37.7143 13.7143L44.5714 0H41.1428L34.2857 13.7143H37.7143Z" fill="currentColor"/>
@@ -43,20 +44,13 @@ export default function FeatureCards() {
               <path d="M92.0709 56.0144C89.5949 54.5347 86.5949 54.4711 84.0603 55.8403L61.6082 67.9098C61.084 72.1378 57.5098 75.4314 53.1429 75.4314H39.3599C38.4124 75.4314 37.6457 74.6648 37.6457 73.7173C37.6457 72.7699 38.4124 72.0032 39.3599 72.0032H53.1429C55.9788 72.0032 58.2857 69.6967 58.2857 66.8612C58.2857 64.0794 56.0619 61.82 53.3002 61.7349C52.274 61.7229 35.7054 61.719 35.7054 61.719L29.8527 55.8671C29.2098 55.2243 28.3376 54.8629 27.4286 54.8629H13.7143V89.1505H19.7679L30.8572 92.5719C35.4643 94.0533 40.392 96.0001 45.8521 96.0001C50.7891 96.0001 55.654 94.363 59.8527 91.1458L92.5045 69.536C94.6925 68.0362 96 65.5589 96 62.9141C96 60.0584 94.5318 57.4807 92.0709 56.0144Z" fill="currentColor"/>
               </svg>
             </div>
-            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[40px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
-            <p className='mb-16 text-[16px] lg:text-[20px]  font-normal font-Poppins'>
+            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[30px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
+            <p className=' text-[16px] lg:text-[20px]  font-normal font-Poppins'>
               Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.
             </p>
-              <Link to="/login" className="w-fit px-[32px] py-[12px] m-auto text-[16px] lg:text-[18px] flex gap-[10px] items-center font-medium text-white group-hover:text-featuretext bg-featuretext group-hover:bg-white rounded-[42px] transition-all ease-in-out duration-700">
-                READ MORE
-              <div className="p-[5px] flex items-center text-featuretext justify-center link-svg w-6 h-6 bg-white group-hover:bg-featuretext transition-all ease-in-out duration-700 rounded-[50px]">
-              <svg width="14" height="14" viewBox="0 0 11 11" className='group-hover:text-white' xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.72214 10.2325L9.49837 2.45625L9.48209 7.12092C9.48037 7.20366 9.49513 7.2858 9.52553 7.36254C9.55593 7.43929 9.60135 7.50911 9.65915 7.56792C9.71694 7.62674 9.78595 7.67337 9.86215 7.7051C9.93835 7.73683 10.0202 7.75303 10.103 7.75274C10.1857 7.75245 10.2677 7.73568 10.3441 7.70342C10.4205 7.67116 10.4899 7.62404 10.5481 7.56482C10.6063 7.5056 10.6522 7.43547 10.6831 7.3585C10.714 7.28154 10.7294 7.1993 10.7282 7.11657L10.7498 0.947535C10.7503 0.782294 10.6852 0.624057 10.5688 0.507621C10.4523 0.391186 10.2941 0.326086 10.1289 0.326637L3.95983 0.348162C3.79645 0.351572 3.64049 0.419008 3.52555 0.535947C3.41061 0.652887 3.34589 0.809973 3.34532 0.973371C3.34475 1.13677 3.40838 1.29341 3.52251 1.40955C3.63663 1.52569 3.79212 1.59204 3.95548 1.59431L8.62015 1.57803L0.843928 9.35426C0.726653 9.47153 0.660445 9.63027 0.659869 9.79554C0.659292 9.96081 0.724394 10.1191 0.840852 10.2355C0.957311 10.352 1.11559 10.4171 1.28086 10.4165C1.44613 10.416 1.60487 10.3497 1.72214 10.2325Z" fill="currentColor"/>
-              </svg>
-              </div>
-              </Link>
           </div>
-          <div className="feature-card  flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
+
+          <div className="feature-card cursor-pointer flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
             <div className="svg-col mb-[10px] text-featuretext">
               <svg width="96" height="96" viewBox="0 0 96 96" className='group-hover:text-white transition-all ease-in-out duration-700' xmlns="http://www.w3.org/2000/svg">
               <path d="M37.7143 13.7143L44.5714 0H41.1428L34.2857 13.7143H37.7143Z" fill="currentColor"/>
@@ -67,18 +61,61 @@ export default function FeatureCards() {
               <path d="M92.0709 56.0144C89.5949 54.5347 86.5949 54.4711 84.0603 55.8403L61.6082 67.9098C61.084 72.1378 57.5098 75.4314 53.1429 75.4314H39.3599C38.4124 75.4314 37.6457 74.6648 37.6457 73.7173C37.6457 72.7699 38.4124 72.0032 39.3599 72.0032H53.1429C55.9788 72.0032 58.2857 69.6967 58.2857 66.8612C58.2857 64.0794 56.0619 61.82 53.3002 61.7349C52.274 61.7229 35.7054 61.719 35.7054 61.719L29.8527 55.8671C29.2098 55.2243 28.3376 54.8629 27.4286 54.8629H13.7143V89.1505H19.7679L30.8572 92.5719C35.4643 94.0533 40.392 96.0001 45.8521 96.0001C50.7891 96.0001 55.654 94.363 59.8527 91.1458L92.5045 69.536C94.6925 68.0362 96 65.5589 96 62.9141C96 60.0584 94.5318 57.4807 92.0709 56.0144Z" fill="currentColor"/>
               </svg>
             </div>
-            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[40px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
-            <p className='mb-16 text-[16px] lg:text-[20px]  font-normal font-Poppins'>
+            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[30px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
+            <p className=' text-[16px] lg:text-[20px]  font-normal font-Poppins'>
               Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.
             </p>
-              <Link to="/login" className="w-fit px-[32px] py-[12px] m-auto text-[16px] lg:text-[18px] flex gap-[10px] items-center font-medium text-white group-hover:text-featuretext bg-featuretext group-hover:bg-white rounded-[42px] transition-all ease-in-out duration-700">
-                READ MORE
-              <div className="p-[5px] flex items-center text-featuretext justify-center link-svg w-6 h-6 bg-white group-hover:bg-featuretext transition-all ease-in-out duration-700 rounded-[50px]">
-              <svg width="14" height="14" viewBox="0 0 11 11" className='group-hover:text-white' xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.72214 10.2325L9.49837 2.45625L9.48209 7.12092C9.48037 7.20366 9.49513 7.2858 9.52553 7.36254C9.55593 7.43929 9.60135 7.50911 9.65915 7.56792C9.71694 7.62674 9.78595 7.67337 9.86215 7.7051C9.93835 7.73683 10.0202 7.75303 10.103 7.75274C10.1857 7.75245 10.2677 7.73568 10.3441 7.70342C10.4205 7.67116 10.4899 7.62404 10.5481 7.56482C10.6063 7.5056 10.6522 7.43547 10.6831 7.3585C10.714 7.28154 10.7294 7.1993 10.7282 7.11657L10.7498 0.947535C10.7503 0.782294 10.6852 0.624057 10.5688 0.507621C10.4523 0.391186 10.2941 0.326086 10.1289 0.326637L3.95983 0.348162C3.79645 0.351572 3.64049 0.419008 3.52555 0.535947C3.41061 0.652887 3.34589 0.809973 3.34532 0.973371C3.34475 1.13677 3.40838 1.29341 3.52251 1.40955C3.63663 1.52569 3.79212 1.59204 3.95548 1.59431L8.62015 1.57803L0.843928 9.35426C0.726653 9.47153 0.660445 9.63027 0.659869 9.79554C0.659292 9.96081 0.724394 10.1191 0.840852 10.2355C0.957311 10.352 1.11559 10.4171 1.28086 10.4165C1.44613 10.416 1.60487 10.3497 1.72214 10.2325Z" fill="currentColor"/>
+          </div>
+
+             <div className="feature-card cursor-pointer flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
+            <div className="svg-col mb-[10px] text-featuretext">
+              <svg width="96" height="96" viewBox="0 0 96 96" className='group-hover:text-white transition-all ease-in-out duration-700' xmlns="http://www.w3.org/2000/svg">
+              <path d="M37.7143 13.7143L44.5714 0H41.1428L34.2857 13.7143H37.7143Z" fill="currentColor"/>
+              <path d="M30.8571 13.7143L37.7143 0H10.2857C8.3923 0 6.85715 1.53516 6.85715 3.42857V13.7143H30.8571ZM24 3.42857C25.8936 3.42857 27.4286 4.96352 27.4286 6.85714C27.4286 8.75077 25.8936 10.2857 24 10.2857C22.1066 10.2857 20.5714 8.75077 20.5714 6.85714C20.5714 4.96352 22.1066 3.42857 24 3.42857ZM13.7143 3.42857C15.6079 3.42857 17.1429 4.96352 17.1429 6.85714C17.1429 8.75077 15.6079 10.2857 13.7143 10.2857C11.8209 10.2857 10.2857 8.75077 10.2857 6.85714C10.2857 4.96352 11.8209 3.42857 13.7143 3.42857Z" fill="currentColor"/>
+              <path d="M89.1429 13.7143V3.42857C89.1429 1.53516 87.6077 0 85.7143 0H48L41.1429 13.7143H89.1429Z" fill="currentColor"/>
+              <path d="M6.85714 51.4285H0V92.5713H6.85714C8.75077 92.5713 10.2857 91.0362 10.2857 89.1428V54.857C10.2857 52.9634 8.75077 51.4285 6.85714 51.4285Z" fill="currentColor"/>
+              <path d="M12.7636 51.4352H27.4286C29.26 51.4352 30.981 52.1484 32.2768 53.4442L37.125 58.289C41.1663 58.2924 52.49 58.2991 53.3337 58.3058C57.1138 58.423 60.2042 60.8471 61.2924 64.1852L82.4364 52.8214C84.1205 51.9107 86.0156 51.4285 87.9141 51.4285C88.3259 51.4285 88.735 51.4681 89.1429 51.5125V17.1428H6.85715V48C9.38568 48 11.5746 49.3924 12.7636 51.4352ZM58.9026 27.0318C58.1761 26.4257 58.0773 25.3443 58.6833 24.616C59.2893 23.8895 60.3691 23.7907 61.0991 24.3967L71.3848 32.9682C71.7748 33.2946 72.0008 33.7768 72.0008 34.2857C72.0008 34.7946 71.7748 35.2768 71.3848 35.6032L61.0991 44.1746C60.7776 44.4408 60.3892 44.5714 60.0025 44.5714C59.5103 44.5714 59.0232 44.3621 58.6833 43.9553C58.0773 43.2271 58.1761 42.1456 58.9026 41.5396L67.608 34.2857L58.9026 27.0318ZM41.3879 41.9728L51.6736 24.8299C52.1625 24.0163 53.2272 23.7601 54.0241 24.2423C54.8377 24.7295 55.1022 25.7825 54.6134 26.5944L44.3276 43.7373C44.0062 44.273 43.4387 44.5693 42.8561 44.5693C42.5564 44.5693 42.2517 44.4906 41.9755 44.3249C41.1636 43.8377 40.9007 42.7847 41.3879 41.9728ZM24.6161 32.9682L34.9018 24.3967C35.6317 23.7907 36.7115 23.8895 37.3175 24.616C37.9236 25.3443 37.8248 26.4257 37.0982 27.0318L28.3929 34.2857L37.0982 41.5396C37.8248 42.1456 37.9236 43.2271 37.3175 43.9553C36.9777 44.3621 36.4905 44.5714 35.9983 44.5714C35.6116 44.5714 35.2232 44.4408 34.9018 44.1746L24.6161 35.6032C24.226 35.2768 24 34.7946 24 34.2857C24 33.7768 24.226 33.2946 24.6161 32.9682Z" fill="currentColor"/>
+              <path d="M92.0709 56.0144C89.5949 54.5347 86.5949 54.4711 84.0603 55.8403L61.6082 67.9098C61.084 72.1378 57.5098 75.4314 53.1429 75.4314H39.3599C38.4124 75.4314 37.6457 74.6648 37.6457 73.7173C37.6457 72.7699 38.4124 72.0032 39.3599 72.0032H53.1429C55.9788 72.0032 58.2857 69.6967 58.2857 66.8612C58.2857 64.0794 56.0619 61.82 53.3002 61.7349C52.274 61.7229 35.7054 61.719 35.7054 61.719L29.8527 55.8671C29.2098 55.2243 28.3376 54.8629 27.4286 54.8629H13.7143V89.1505H19.7679L30.8572 92.5719C35.4643 94.0533 40.392 96.0001 45.8521 96.0001C50.7891 96.0001 55.654 94.363 59.8527 91.1458L92.5045 69.536C94.6925 68.0362 96 65.5589 96 62.9141C96 60.0584 94.5318 57.4807 92.0709 56.0144Z" fill="currentColor"/>
               </svg>
-              </div>
-              </Link>
+            </div>
+            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[30px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
+            <p className=' text-[16px] lg:text-[20px]  font-normal font-Poppins'>
+              Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.
+            </p>
+          </div>
+
+             <div className="feature-card cursor-pointer flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
+            <div className="svg-col mb-[10px] text-featuretext">
+              <svg width="96" height="96" viewBox="0 0 96 96" className='group-hover:text-white transition-all ease-in-out duration-700' xmlns="http://www.w3.org/2000/svg">
+              <path d="M37.7143 13.7143L44.5714 0H41.1428L34.2857 13.7143H37.7143Z" fill="currentColor"/>
+              <path d="M30.8571 13.7143L37.7143 0H10.2857C8.3923 0 6.85715 1.53516 6.85715 3.42857V13.7143H30.8571ZM24 3.42857C25.8936 3.42857 27.4286 4.96352 27.4286 6.85714C27.4286 8.75077 25.8936 10.2857 24 10.2857C22.1066 10.2857 20.5714 8.75077 20.5714 6.85714C20.5714 4.96352 22.1066 3.42857 24 3.42857ZM13.7143 3.42857C15.6079 3.42857 17.1429 4.96352 17.1429 6.85714C17.1429 8.75077 15.6079 10.2857 13.7143 10.2857C11.8209 10.2857 10.2857 8.75077 10.2857 6.85714C10.2857 4.96352 11.8209 3.42857 13.7143 3.42857Z" fill="currentColor"/>
+              <path d="M89.1429 13.7143V3.42857C89.1429 1.53516 87.6077 0 85.7143 0H48L41.1429 13.7143H89.1429Z" fill="currentColor"/>
+              <path d="M6.85714 51.4285H0V92.5713H6.85714C8.75077 92.5713 10.2857 91.0362 10.2857 89.1428V54.857C10.2857 52.9634 8.75077 51.4285 6.85714 51.4285Z" fill="currentColor"/>
+              <path d="M12.7636 51.4352H27.4286C29.26 51.4352 30.981 52.1484 32.2768 53.4442L37.125 58.289C41.1663 58.2924 52.49 58.2991 53.3337 58.3058C57.1138 58.423 60.2042 60.8471 61.2924 64.1852L82.4364 52.8214C84.1205 51.9107 86.0156 51.4285 87.9141 51.4285C88.3259 51.4285 88.735 51.4681 89.1429 51.5125V17.1428H6.85715V48C9.38568 48 11.5746 49.3924 12.7636 51.4352ZM58.9026 27.0318C58.1761 26.4257 58.0773 25.3443 58.6833 24.616C59.2893 23.8895 60.3691 23.7907 61.0991 24.3967L71.3848 32.9682C71.7748 33.2946 72.0008 33.7768 72.0008 34.2857C72.0008 34.7946 71.7748 35.2768 71.3848 35.6032L61.0991 44.1746C60.7776 44.4408 60.3892 44.5714 60.0025 44.5714C59.5103 44.5714 59.0232 44.3621 58.6833 43.9553C58.0773 43.2271 58.1761 42.1456 58.9026 41.5396L67.608 34.2857L58.9026 27.0318ZM41.3879 41.9728L51.6736 24.8299C52.1625 24.0163 53.2272 23.7601 54.0241 24.2423C54.8377 24.7295 55.1022 25.7825 54.6134 26.5944L44.3276 43.7373C44.0062 44.273 43.4387 44.5693 42.8561 44.5693C42.5564 44.5693 42.2517 44.4906 41.9755 44.3249C41.1636 43.8377 40.9007 42.7847 41.3879 41.9728ZM24.6161 32.9682L34.9018 24.3967C35.6317 23.7907 36.7115 23.8895 37.3175 24.616C37.9236 25.3443 37.8248 26.4257 37.0982 27.0318L28.3929 34.2857L37.0982 41.5396C37.8248 42.1456 37.9236 43.2271 37.3175 43.9553C36.9777 44.3621 36.4905 44.5714 35.9983 44.5714C35.6116 44.5714 35.2232 44.4408 34.9018 44.1746L24.6161 35.6032C24.226 35.2768 24 34.7946 24 34.2857C24 33.7768 24.226 33.2946 24.6161 32.9682Z" fill="currentColor"/>
+              <path d="M92.0709 56.0144C89.5949 54.5347 86.5949 54.4711 84.0603 55.8403L61.6082 67.9098C61.084 72.1378 57.5098 75.4314 53.1429 75.4314H39.3599C38.4124 75.4314 37.6457 74.6648 37.6457 73.7173C37.6457 72.7699 38.4124 72.0032 39.3599 72.0032H53.1429C55.9788 72.0032 58.2857 69.6967 58.2857 66.8612C58.2857 64.0794 56.0619 61.82 53.3002 61.7349C52.274 61.7229 35.7054 61.719 35.7054 61.719L29.8527 55.8671C29.2098 55.2243 28.3376 54.8629 27.4286 54.8629H13.7143V89.1505H19.7679L30.8572 92.5719C35.4643 94.0533 40.392 96.0001 45.8521 96.0001C50.7891 96.0001 55.654 94.363 59.8527 91.1458L92.5045 69.536C94.6925 68.0362 96 65.5589 96 62.9141C96 60.0584 94.5318 57.4807 92.0709 56.0144Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[30px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
+            <p className=' text-[16px] lg:text-[20px]  font-normal font-Poppins'>
+              Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.
+            </p>
+          </div>
+
+             <div className="feature-card cursor-pointer flex flex-col group items-center hover:text-white hover:bg-featuretext bg-white  transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10">
+            <div className="svg-col mb-[10px] text-featuretext">
+              <svg width="96" height="96" viewBox="0 0 96 96" className='group-hover:text-white transition-all ease-in-out duration-700' xmlns="http://www.w3.org/2000/svg">
+              <path d="M37.7143 13.7143L44.5714 0H41.1428L34.2857 13.7143H37.7143Z" fill="currentColor"/>
+              <path d="M30.8571 13.7143L37.7143 0H10.2857C8.3923 0 6.85715 1.53516 6.85715 3.42857V13.7143H30.8571ZM24 3.42857C25.8936 3.42857 27.4286 4.96352 27.4286 6.85714C27.4286 8.75077 25.8936 10.2857 24 10.2857C22.1066 10.2857 20.5714 8.75077 20.5714 6.85714C20.5714 4.96352 22.1066 3.42857 24 3.42857ZM13.7143 3.42857C15.6079 3.42857 17.1429 4.96352 17.1429 6.85714C17.1429 8.75077 15.6079 10.2857 13.7143 10.2857C11.8209 10.2857 10.2857 8.75077 10.2857 6.85714C10.2857 4.96352 11.8209 3.42857 13.7143 3.42857Z" fill="currentColor"/>
+              <path d="M89.1429 13.7143V3.42857C89.1429 1.53516 87.6077 0 85.7143 0H48L41.1429 13.7143H89.1429Z" fill="currentColor"/>
+              <path d="M6.85714 51.4285H0V92.5713H6.85714C8.75077 92.5713 10.2857 91.0362 10.2857 89.1428V54.857C10.2857 52.9634 8.75077 51.4285 6.85714 51.4285Z" fill="currentColor"/>
+              <path d="M12.7636 51.4352H27.4286C29.26 51.4352 30.981 52.1484 32.2768 53.4442L37.125 58.289C41.1663 58.2924 52.49 58.2991 53.3337 58.3058C57.1138 58.423 60.2042 60.8471 61.2924 64.1852L82.4364 52.8214C84.1205 51.9107 86.0156 51.4285 87.9141 51.4285C88.3259 51.4285 88.735 51.4681 89.1429 51.5125V17.1428H6.85715V48C9.38568 48 11.5746 49.3924 12.7636 51.4352ZM58.9026 27.0318C58.1761 26.4257 58.0773 25.3443 58.6833 24.616C59.2893 23.8895 60.3691 23.7907 61.0991 24.3967L71.3848 32.9682C71.7748 33.2946 72.0008 33.7768 72.0008 34.2857C72.0008 34.7946 71.7748 35.2768 71.3848 35.6032L61.0991 44.1746C60.7776 44.4408 60.3892 44.5714 60.0025 44.5714C59.5103 44.5714 59.0232 44.3621 58.6833 43.9553C58.0773 43.2271 58.1761 42.1456 58.9026 41.5396L67.608 34.2857L58.9026 27.0318ZM41.3879 41.9728L51.6736 24.8299C52.1625 24.0163 53.2272 23.7601 54.0241 24.2423C54.8377 24.7295 55.1022 25.7825 54.6134 26.5944L44.3276 43.7373C44.0062 44.273 43.4387 44.5693 42.8561 44.5693C42.5564 44.5693 42.2517 44.4906 41.9755 44.3249C41.1636 43.8377 40.9007 42.7847 41.3879 41.9728ZM24.6161 32.9682L34.9018 24.3967C35.6317 23.7907 36.7115 23.8895 37.3175 24.616C37.9236 25.3443 37.8248 26.4257 37.0982 27.0318L28.3929 34.2857L37.0982 41.5396C37.8248 42.1456 37.9236 43.2271 37.3175 43.9553C36.9777 44.3621 36.4905 44.5714 35.9983 44.5714C35.6116 44.5714 35.2232 44.4408 34.9018 44.1746L24.6161 35.6032C24.226 35.2768 24 34.7946 24 34.2857C24 33.7768 24.226 33.2946 24.6161 32.9682Z" fill="currentColor"/>
+              <path d="M92.0709 56.0144C89.5949 54.5347 86.5949 54.4711 84.0603 55.8403L61.6082 67.9098C61.084 72.1378 57.5098 75.4314 53.1429 75.4314H39.3599C38.4124 75.4314 37.6457 74.6648 37.6457 73.7173C37.6457 72.7699 38.4124 72.0032 39.3599 72.0032H53.1429C55.9788 72.0032 58.2857 69.6967 58.2857 66.8612C58.2857 64.0794 56.0619 61.82 53.3002 61.7349C52.274 61.7229 35.7054 61.719 35.7054 61.719L29.8527 55.8671C29.2098 55.2243 28.3376 54.8629 27.4286 54.8629H13.7143V89.1505H19.7679L30.8572 92.5719C35.4643 94.0533 40.392 96.0001 45.8521 96.0001C50.7891 96.0001 55.654 94.363 59.8527 91.1458L92.5045 69.536C94.6925 68.0362 96 65.5589 96 62.9141C96 60.0584 94.5318 57.4807 92.0709 56.0144Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 className='mb-6  text-[20px]    md:text-[29px]   xl:text-[30px] 2xl:text-[27px]  font-semibold font-Poppins'>Web Development</h3>
+            <p className=' text-[16px] lg:text-[20px]  font-normal font-Poppins'>
+              Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.
+            </p>
           </div>
 
         </div>
