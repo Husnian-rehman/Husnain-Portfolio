@@ -41,13 +41,13 @@ export const Header = () => {
 
   return (
     <>
-      <header className="py-3 rounded-full fixed w-[97%] top-[15px] z-[99] bg-white max-w-[1400px] m-auto right-0 left-0">
+      <header className="py-3 rounded-full fixed w-[97%] top-[15px] z-[99] backdrop-blur-[32px] bg-bgblack max-w-[1400px] m-auto right-0 left-0">
         <div className="px-10 flex items-center justify-between relative mx-auto">
           {/* Logo */}
           <div className="logo max-w-[225px]">
             <Link
               to="/"
-              className="text-2xl font-bold text-blue-600 text-default"
+              className="text-2xl font-bold text-blue-600 text-default leading-[1]"
             >
               Husnain
             </Link>
@@ -69,9 +69,9 @@ export const Header = () => {
             <nav
               id="navMenu"
               className={`
-                fixed top-[71px] right-0 h-full max-w-[400px] w-full py-6
+                fixed top-[52px] right-[-13px] h-screen lg:h-auto max-w-[400px] w-full py-6
                 transform duration-300 ease-in-out z-50
-                lg:static lg:transform-none lg:flex lg:flex-row bg-default lg:p-0 flex-col lg:max-w-fit lg:bg-white md:space-x-6 transition-all
+                lg:static lg:transform-none lg:flex lg:flex-row bg-default lg:p-0 flex-col lg:max-w-fit lg:bg-transparent md:space-x-6 transition-all
                 ${menuOpen ? "translate-x-0" : "translate-x-full"} lg:translate-x-0
               `}
             >
@@ -81,7 +81,7 @@ export const Header = () => {
                     <Link
                       to={item.path}
                       onClick={handleCloseMenu}
-                      className="block py-4 px-6 lg:p-0 text-[20px] lg:text-[16px] font-medium text-white lg:text-primary hover:text-default hover:bg-white transition-all duration-500 ease-in-out"
+                      className="block py-4 px-6 lg:p-0 text-[20px] lg:text-[16px] font-medium text-white  hover:text-default hover:bg-white  lg:hover:bg-transparent transition-all duration-500 ease-in-out"
                     >
                       {item.label}
                     </Link>
@@ -91,7 +91,7 @@ export const Header = () => {
               <Link
                 to=""
                 onClick={handleCloseMenu}
-                className="!ml-0 lg:hidden flex text-[20px] xl:text-[18px] lg:text-[15px] font-medium text-white  lg:bg-default  lg:px-8 lg:py-3 py-4 px-6 hover:text-default hover:bg-white transition-all duration-300 ease-in-out"
+                className="!ml-0 lg:hidden flex text-[20px] xl:text-[18px] lg:text-[15px] font-medium text-white  lg:bg-default  lg:px-8 lg:py-3 py-4 px-6 hover:text-default lg:bg-transparent hover:bg-white transition-all duration-300 ease-in-out"
               >
                 DOWNLOAD CV
               </Link>
@@ -101,7 +101,7 @@ export const Header = () => {
           {/* CV Button for desktop */}
           <div className="hidden lg:flex ml-4">
             <Link
-              to=""
+              to="/CVDownload"
               className="text-[16px] xl:text-[18px] font-medium text-white bg-default rounded-[42px] px-8 py-3 transition-all duration-500 ease-in-out"
             >
               DOWNLOAD CV

@@ -1,9 +1,9 @@
 import React from 'react'
 import FeatureCards from '../components/FeatureCards'
-import AboutMe from '../components/AboutMe'
-import Experience from '../components/Experience'
+// import AboutMe from '../components/AboutMe'
+// import Experience from '../components/Experience'
 // import Hero from '../components/Hero'
-import Testimonial from '../components/testimonial'
+// import Testimonial from '../components/testimonial'
 import Hero1 from '../components/Hero1'
 function Home() {
   return (
@@ -11,9 +11,9 @@ function Home() {
     <Hero1 />
     {/* <Hero /> */}
    <FeatureCards />
-   <AboutMe />
+   {/* <AboutMe />
    <Experience />
-   <Testimonial />
+   <Testimonial /> */}
    </div>
   )
 }
