@@ -185,7 +185,7 @@ const socialLinks = [
             <svg className="w-5 h-5 text-default" fill="currentColor" viewBox="0 0 24 24">
               <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.48 2.5.73 3.85.73a1 1 0 011 1v3.58a1 1 0 01-1 1C10.72 22 2 13.28 2 3a1 1 0 011-1h3.58a1 1 0 011 1c0 1.35.25 2.65.73 3.85a1 1 0 01-.21 1.11l-2.48 2.48z" />
             </svg>
-            <span>+93 729 107 005</span>
+            <span>+92 307 5880209</span>
           </div>
         </div>
 
