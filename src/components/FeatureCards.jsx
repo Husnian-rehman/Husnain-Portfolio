@@ -92,7 +92,7 @@ const ServiceCard = ({ title, description, icon }) => {
 // Main FeatureCards component
 export default function FeatureCards() {
   return (
-    <div className='md:py-[88px] py-[40px]'>
+    <div className='md:py-[88px] py-[40px]' id="services">
       <div className="px-5 max-w-[1400px] m-auto">
         <span className='block text-center mb-5 md:text-[40px] text-[20px] font-bold text-white'>My Services</span>
         <p className='text-center text-txtblack mb-8 md:mb-16 text-[16px] md:text-[20px] font-semibold'>

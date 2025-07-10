@@ -13,7 +13,7 @@ const GetInTouch = () => {
   }
 
   return (
-    <div className="py-[40px] md:min-h-screen bg-black flex items-center justify-center px-4">
+    <div id="contact" className="py-[40px] md:min-h-screen bg-black flex items-center justify-center px-4">
       <form onSubmit={handleSubmit} className="bg-black text-white max-w-[800px] w-full">
         <h2 className="block text-center mb-5 md:text-[40px] text-[20px] font-bold  text-white">Get In Touch</h2>
         <p className="text-center text-txtblack mb-8 md:mb-16 text-[16px] md:text-[20px] font-semibold ">Let's work together</p>

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,11 +33,10 @@ export const Header = () => {
 
   const menuItems = [
     { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Services", path: "/services" },
+    { label: "About", path: "/#aboutme" },
+    { label: "Services", path: "/#services" },
     { label: "Portfolio", path: "/portfolio" },
-    { label: "Testimonials", path: "/testimonials" },
-    { label: "Contact", path: "/contact" },
+    { label: "Contact", path: "/#contact" },
   ];
 
   return (
@@ -47,7 +47,7 @@ export const Header = () => {
           <div className="logo max-w-[225px]">
             <Link
               to="/"
-              className="text-2xl font-bold text-blue-600 text-default leading-[1]"
+              className="text-2xl font-bold   bg-gradient-to-r from-[#E46400] to-[#ff0055] text-transparent bg-clip-text leading-[1]"
             >
               Husnain
             </Link>
@@ -75,19 +75,31 @@ export const Header = () => {
                 ${menuOpen ? "translate-x-0" : "translate-x-full"} lg:translate-x-0
               `}
             >
-              <ul className="flex flex-col lg:flex-row xl:gap-14 lg:gap-8 w-full text-left lg:w-auto">
-                {menuItems.map((item, index) => (
-                  <li key={index}>
+            <ul className="flex flex-col lg:flex-row xl:gap-14 lg:gap-8 w-full text-left lg:w-auto">
+              {menuItems.map((item, index) => (
+                <li key={index}>
+                  {item.path.includes("#") ? (
+                    <HashLink
+                      smooth
+                      to={item.path}
+                      onClick={handleCloseMenu}
+                      className="block py-4 px-6 lg:p-0 text-[20px] lg:text-[16px] font-medium text-white hover:text-default hover:bg-white lg:hover:bg-transparent transition-all duration-500 ease-in-out"
+                    >
+                      {item.label}
+                    </HashLink>
+                  ) : (
                     <Link
                       to={item.path}
                       onClick={handleCloseMenu}
-                      className="block py-4 px-6 lg:p-0 text-[20px] lg:text-[16px] font-medium text-white  hover:text-default hover:bg-white  lg:hover:bg-transparent transition-all duration-500 ease-in-out"
+                      className="block py-4 px-6 lg:p-0 text-[20px] lg:text-[16px] font-medium text-white hover:text-default hover:bg-white lg:hover:bg-transparent transition-all duration-500 ease-in-out"
                     >
                       {item.label}
                     </Link>
-                  </li>
-                ))}
-              </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+
               <Link
                 to=""
                 onClick={handleCloseMenu}
