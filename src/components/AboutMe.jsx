@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import BlackSuitImage from '../man-w-black-suit.png';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 const skillsData = [
   {
     label: 'Figma',
@@ -53,7 +54,6 @@ const skillsData = [
   }
 ];
 
-
 const AboutMe = () => {
   const sectionRef = useRef(null);
   const [progressValues, setProgressValues] = useState(skillsData.map(() => 0));
@@ -64,10 +64,8 @@ const AboutMe = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Reset to 0
           setProgressValues(skillsData.map(() => 0));
 
-          // Animate each skill
           skillsData.forEach((skill, index) => {
             let current = 0;
             const interval = setInterval(() => {
@@ -79,14 +77,11 @@ const AboutMe = () => {
                 return updated;
               });
 
-              if (current > skill.value) {
-                clearInterval(interval);
-              }
-            }, 45); // speed
+              if (current > skill.value) clearInterval(interval);
+            }, 45);
             intervals.push(interval);
           });
         } else {
-          // Out of view: reset progress and stop intervals
           setProgressValues(skillsData.map(() => 0));
           intervals.forEach(clearInterval);
         }
@@ -94,54 +89,73 @@ const AboutMe = () => {
       { threshold: 0.4 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    const section = sectionRef.current; // ✅ fixed for ESLint
+
+    if (section) observer.observe(section);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (section) observer.unobserve(section);
       intervals.forEach(clearInterval);
     };
   }, []);
 
   return (
-    <section ref={sectionRef} id="aboutme" className="bg-black text-white py-16 ">
-      <div className="max-w-[1400px]  mx-auto text-center px-5">
-        <h2 className="block text-center mb-5 md:text-[40px] text-[20px] font-bold  text-white">About Me</h2>
-        <p className="text-center text-txtblack mb-8 md:mb-16 text-[16px] md:text-[20px] font-semibold ">
+    <section ref={sectionRef} id="aboutme" className="bg-black text-white py-16">
+      <div className="max-w-[1400px] mx-auto text-center px-5">
+        <h2 className="block text-center mb-5 md:text-[40px] text-[20px] font-bold text-white">About Me</h2>
+        <p className="text-center text-txtblack mb-8 md:mb-16 text-[16px] md:text-[20px] font-semibold">
           User Interface And User Experience And Also Video Editing
         </p>
 
-        <div className="flex flex-col md:flex-row items-center justify-center  gap-8 md:gap-16 md:mb-[100px] mb-[50px]">
-          <div className='relative md:w-[40%]'  data-aos="fade-right" data-aos-delay="200">
-              <img
-              src={BlackSuitImage}
-              alt="profile"
-              className="rounded-md grayscale relative z-10"
-            />
-            <div className='bg-default absolute bottom-0 w-full h-[80%] rounded-t-[50%] right-0'></div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 md:mb-[100px] mb-[50px]">
+          <div className="relative md:w-[40%]" data-aos="fade-right" data-aos-delay="200">
+            <img src={BlackSuitImage} alt="profile" className="rounded-md grayscale relative z-10" />
+            <div className="bg-default absolute bottom-0 w-full h-[80%] rounded-t-[50%] right-0"></div>
           </div>
-        <div className='md:w-[60%] flex flex-col items-start gap-10'   data-aos="fade-left" data-aos-delay="400">
-            <p className=" text-txtblack text-left xl:text-[24px] lg:text-[20px] text-[16px]">
-              A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions.Their canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs.In this digital atelier, they don the mantle of problem solvers, confronting bugs and glitches like valiant knights in an ever-evolving quest for perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code. designs.In this digital atelier.
+
+          <div className="md:w-[60%] flex flex-col items-start gap-10" data-aos="fade-left" data-aos-delay="400">
+            <p className="text-txtblack text-left xl:text-[24px] lg:text-[20px] text-[16px]">
+              A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of
+              code, sculpting intangible structures that shape our technological world. With fingers poised over
+              keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms
+              and solutions.
             </p>
-            <Link to="/CVDownload" className="flex gap-3 md: text-[16px] font-semibold text-white px-[40px] py-3 rounded-xl hover:bg-default border border-1 border-[#575757]  transition-all ease-in-out duration-500">
+            <Link
+              to="/CVDownload"
+              className="flex gap-3 text-[16px] font-semibold text-white px-[40px] py-3 rounded-xl hover:bg-default border border-[#575757] transition-all ease-in-out duration-500"
+            >
               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.1222 13.4361L10.1222 1.39511" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M13.0382 10.5084L10.1222 13.4364L7.20619 10.5084" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.755 6.12802H15.688C17.723 6.12802 19.372 7.77702 19.372 9.81302V14.697C19.372 16.727 17.727 18.372 15.697 18.372L4.55699 18.372C2.52199 18.372 0.871994 16.722 0.871994 14.687V9.80202C0.871994 7.77302 2.51799 6.12802 4.54699 6.12802H5.48899" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path
+                  d="M10.1222 13.4361L10.1222 1.39511"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M13.0382 10.5084L10.1222 13.4364L7.20619 10.5084"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M14.755 6.12802H15.688C17.723 6.12802 19.372 7.77702 19.372 9.81302V14.697C19.372 16.727 17.727 18.372 15.697 18.372L4.55699 18.372C2.52199 18.372 0.871994 16.722 0.871994 14.687V9.80202C0.871994 7.77302 2.51799 6.12802 4.54699 6.12802H5.48899"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
               Download CV
             </Link>
-        </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3  md:grid-cols-5 gap-6 max-w-[1100px] m-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-[1100px] m-auto">
           {skillsData.map((skill, index) => (
-            <div key={index} className="text-center"  data-aos="zoom-in-up" data-aos-delay={index * 100}>
-             <div className="w-36 h-36 mx-auto relative mb-6">
+            <div key={index} className="text-center" data-aos="zoom-in-up" data-aos-delay={index * 100}>
+              <div className="w-36 h-36 mx-auto relative mb-6">
                 <svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
                   <circle cx="60" cy="60" r="52" stroke="#444" strokeWidth="8" fill="none" />
                   <circle
@@ -163,7 +177,7 @@ const AboutMe = () => {
                 />
               </div>
 
-              <h2 className='text-default font-bold text-xl mb-2'>{progressValues[index]}%</h2>
+              <h2 className="text-default font-bold text-xl mb-2">{progressValues[index]}%</h2>
               <p className="lg:text-lg text-sm text-txtblack font-semibold">{skill.label}</p>
             </div>
           ))}
@@ -172,121 +186,5 @@ const AboutMe = () => {
     </section>
   );
 };
+
 export default AboutMe;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-// import staticCardImage from '../Mask group.png'; 
-// import vedioImage from '../Group 97.png';
-// export default function AboutMe() {
-//   return (
-//     <section className="pt-[120px] pb-[88px]  bg-white">
-//       <div className=" max-w-[1460px] px-5 m-auto flex flex-wrap lg:flex-nowrap gap-8 xl:gap-16 ">
-//         {/* Left Column */}
-//         <div className='max-w-full md:max-w-[47%]  lg:max-w-[441px] w-full relative'>
-//           <span className="text-xl font-medium text-featuretext bg-featurebg px-8 py-3 rounded-[42px] mb-6 inline-block  border border-secondry">
-//             ABOUT ME
-//           </span>
-//           <h2 className="text-xl md:text-[40px] font-semibold text-primary mb-6 leading-normal">
-//             Why hire me for your next project?
-//           </h2>
-//           <p className="text-description mb-[159px] text-[20px] font-Poppins font-normal">
-//             I'm specialized in turning complex problems into elegant solutions. My approach blends
-//             creativity with strategic thinking to deliver designs that not only look great but work
-//             seamlessly. Ready to start your next project?
-//           </p>
-//           <div className='absolute bottom-[12%]  right-[45%] m-auto w-fit'>
-//              <svg width="159" height="132" viewBox="0 0 159 132" fill="none" xmlns="http://www.w3.org/2000/svg">
-//               <path d="M133.756 20.0761C128.69 18.7741 123.602 17.5356 118.554 16.1688C110.64 14.0139 102.764 11.7213 94.8445 9.59547C92.8089 9.04483 92.198 7.79539 92.6071 6.02731C92.9959 4.47942 93.5817 2.98788 94.3503 1.58907C95.0832 0.19894 96.2838 -0.146462 97.9182 0.341384C115.661 5.61749 133.574 10.2462 151.704 14.0261C152.177 14.1556 152.657 14.2601 153.141 14.3392C155.424 14.5712 156.665 15.6337 156.079 18.1978C158.254 18.4499 158.412 19.8896 158.264 21.557C157.979 24.7086 156.713 26.9095 153.625 28.3934C145.621 32.2455 137.548 36.0651 129.952 40.6573C124.61 43.8772 120.032 48.3377 115.053 52.171C114.211 52.8177 113.06 53.0694 112.051 53.5072C111.753 52.4192 110.992 51.1933 111.257 50.2681C111.802 48.3913 112.55 46.3494 113.837 44.9414C118.723 39.5841 124.594 35.3874 130.762 31.6042C131.46 31.2235 132.033 30.6504 132.413 29.9532C129.189 30.1119 125.957 30.1391 122.751 30.4546C99.0408 32.8051 77.268 40.667 57.7095 54.1534C37.3434 68.2007 21.7818 86.4522 11.8454 109.213C9.33809 114.964 7.5224 121.02 5.30254 126.906C4.82401 128.203 4.15627 129.422 3.32084 130.525C2.97061 130.986 1.90389 131.239 1.30813 131.07C0.829117 130.936 0.322529 130.055 0.256282 129.46C0.159933 128.487 0.250428 127.506 0.522915 126.568C9.92205 93.8724 27.9415 67.0559 55.6392 47.0911C78.1987 30.8252 103.531 22.0768 131.362 20.6316C132.159 20.5912 132.958 20.5335 133.756 20.4891L133.756 20.0761Z" fill="#EEEAFF"/>
-//             </svg>
-//           </div>
-//           <Link
-//               to="/"
-//               className="text-xl font-medium text-white bg-featuretext px-8 py-3 rounded-[42px]  inline-block transition uppercase"
-//             >
-//               View Portfolio
-//             </Link>
-//         </div>
-
-//           {/* Stat Card */}
-//           <div className="max-w-full md:max-w-[47%]  lg:max-w-[340px] w-full bg-featurebg border border-featuretext rounded-xl p-6 h-fit">
-//             <div className='mb-3 '>
-//             <svg width="64" height="66" viewBox="0 0 64 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-//               <circle cx="32" cy="32" r="32" fill="#0A0615"/>
-//               <circle cx="32" cy="34" r="32" fill="url(#paint0_linear_741_850)"/>
-//               <path d="M45.5095 20.3589C41.9009 16.7505 37.1032 14.7632 32 14.7632C26.4044 14.7632 21.1083 17.2051 17.4698 21.4629C17.269 21.6978 17.2967 22.0512 17.5317 22.252C17.7666 22.4528 18.12 22.4251 18.3208 22.1901C21.4238 18.5591 25.8071 16.3308 30.5204 15.9433L31.3537 17.2616C31.6712 17.7639 31.7253 18.3918 31.4984 18.941L30.8462 20.5197C30.6546 20.9834 30.2065 21.2831 29.7048 21.2831H28.6089C28.2021 21.2831 27.8217 21.083 27.5913 20.7479L27.3649 20.4186C26.6771 19.4184 25.3559 19.1046 24.2918 19.6889L21.8563 21.0261C21.4342 21.2578 21.128 21.6593 21.0162 22.1276C20.9044 22.5959 20.9962 23.0925 21.2681 23.4898C21.7425 24.1832 22.6396 24.4289 23.4012 24.0739L24.4407 23.5894C24.7293 23.4549 25.076 23.5561 25.2469 23.8247L26.4203 25.6686C26.5262 25.8351 26.5492 26.0371 26.4834 26.223C26.4176 26.4089 26.2726 26.5515 26.0856 26.6142L23.5043 27.4799C22.5365 27.8045 21.7936 28.6241 21.5652 29.6189L21.2154 31.1428C21.2008 31.2067 21.1567 31.2335 21.1224 31.2448C21.0881 31.2561 21.0366 31.2605 20.987 31.2177L20.6589 30.935C20.0744 30.4311 19.2127 30.3705 18.5633 30.7873L16.8486 31.8884L15.9597 25.7243C16.2474 25.1587 16.5657 24.6066 16.9145 24.0707C17.0832 23.8116 17.0098 23.4649 16.7508 23.2963C16.4917 23.1276 16.145 23.201 15.9763 23.46C13.9603 26.5575 12.8947 30.1567 12.8947 33.8684C12.8947 38.9716 14.882 43.7694 18.4905 47.378C22.099 50.9864 26.8968 52.9737 32 52.9737C37.1032 52.9737 41.9009 50.9864 45.5095 47.378C49.1179 43.7694 51.1052 38.9716 51.1052 33.8684C51.1052 28.7653 49.1179 23.9675 45.5095 20.3589ZM49.7657 31.0455L49.4015 31.3611C49.019 31.6926 48.5109 31.8522 48.0075 31.7987L46.8975 31.681C46.7133 31.6616 46.5312 31.7344 46.4114 31.8758C46.2916 32.0171 46.2495 32.2086 46.299 32.3872L46.8772 34.4725C47.0509 35.0992 46.9699 35.7558 46.6491 36.3215L42.1872 44.1893C42.0299 44.4666 41.7341 44.6389 41.4153 44.6389C40.9259 44.6389 40.5279 44.2408 40.5279 43.7515V37.2969C40.5279 35.9987 39.4717 34.9425 38.1734 34.9425H37.6537C35.9607 34.9425 34.5834 33.5652 34.5834 31.8722C34.5834 30.1792 35.9607 28.8018 37.6537 28.8018H40.5366C40.8457 28.8018 41.0963 28.5512 41.0963 28.2421C41.0963 27.933 40.8457 27.6824 40.5366 27.6824H37.7872C37.966 27.3852 38.0813 27.043 38.1132 26.6728C38.1133 26.6717 38.1134 26.6708 38.1135 26.6696C38.1306 26.4685 38.2958 26.3168 38.4976 26.3168H42.916C43.2925 26.3168 43.5988 26.6231 43.5988 26.9995C43.5988 27.3759 43.2925 27.6823 42.916 27.6823C42.6069 27.6823 42.3563 27.9329 42.3563 28.242C42.3563 28.5511 42.6069 28.8017 42.916 28.8017C43.9098 28.8017 44.7183 27.9933 44.7183 26.9995C44.7183 26.0057 43.9098 25.1973 42.916 25.1973H38.4976C37.7104 25.1973 37.0663 25.7882 36.9983 26.5722C36.9982 26.5732 36.9982 26.5742 36.9981 26.5752C36.9445 27.2064 36.4264 27.6823 35.7929 27.6823C35.1259 27.6823 34.5834 27.1397 34.5834 26.4728V26.0171C34.5834 25.3723 34.9281 24.7678 35.483 24.4393L39.3754 22.1361C39.8204 21.8728 40.1174 21.4282 40.1902 20.9162C40.2629 20.4043 40.1016 19.8946 39.7475 19.5176C39.2645 19.0035 38.5034 18.8423 37.8534 19.1167L37.4662 19.2802C37.1502 19.4137 36.7788 19.2676 36.6384 18.9544C36.5237 18.6987 36.5924 18.393 36.8054 18.2108L38.2346 16.9887C40.642 17.8764 42.8495 19.282 44.718 21.1504C47.4399 23.8727 49.1808 27.3138 49.7657 31.0455ZM14.0142 33.8684C14.0142 31.7366 14.3881 29.6447 15.11 27.6753L15.9089 33.2153C16.0388 34.1161 16.5651 34.8941 17.3529 35.3498L18.3496 35.9263L17.558 38.062C17.114 39.2598 17.4865 40.5998 18.4851 41.3964L19.5507 42.2466C19.8451 42.4815 20.0842 42.7864 20.242 43.1285L23.2152 49.5713C21.7913 48.772 20.4683 47.7725 19.2821 46.5863C15.885 43.1893 14.0142 38.6727 14.0142 33.8684ZM25.3756 38.631L26.852 39.1789C27.1883 39.3037 27.4447 39.5567 27.5742 39.8912C27.7036 40.2256 27.6841 40.5854 27.5194 40.904L25.7223 44.3796C25.1998 45.39 25.0575 46.5558 25.3216 47.6621L26.0853 50.8624C25.6555 50.7132 25.2319 50.5479 24.8151 50.3662L21.2586 42.6593C21.0281 42.1599 20.679 41.7145 20.2489 41.3714L19.1833 40.5212C18.5633 40.0266 18.332 39.1946 18.6076 38.451L19.43 36.2324H23.5937C23.9448 36.2324 24.2304 36.518 24.2304 36.8692V36.9844C24.2304 37.7152 24.6906 38.3768 25.3756 38.631ZM44.7179 46.5864C41.3208 49.9834 36.8042 51.8543 32 51.8543C30.4001 51.8543 28.8324 51.6456 27.327 51.2433L26.4103 47.4024C26.2085 46.5568 26.3174 45.6659 26.7166 44.8938L28.5138 41.4182C28.8233 40.8196 28.8614 40.1158 28.6182 39.4873C28.3751 38.8588 27.8733 38.3639 27.2415 38.1294L25.7651 37.5815C25.5167 37.4893 25.3499 37.2495 25.3499 36.9845V36.8693C25.3499 35.9009 24.562 35.1131 23.5937 35.1131H19.1796L17.9135 34.3808C17.439 34.1064 17.1179 33.6433 17.0256 33.1052L19.1682 31.7294C19.4036 31.5783 19.716 31.6002 19.928 31.783L20.2561 32.0658C20.5935 32.3567 21.0479 32.4475 21.4712 32.3087C21.8946 32.1699 22.2068 31.8277 22.3065 31.3933L22.6563 29.8694C22.798 29.2518 23.2594 28.7429 23.8602 28.5414L26.4415 27.6757C26.9572 27.5028 27.3571 27.1095 27.5387 26.5967C27.7202 26.084 27.6568 25.5267 27.3648 25.0678L26.1914 23.2239C25.7198 22.4829 24.7639 22.2039 23.9678 22.575L22.9283 23.0595C22.6654 23.182 22.3558 23.0973 22.1921 22.8578C22.0969 22.7187 22.066 22.5517 22.1051 22.3877C22.1443 22.2236 22.2472 22.0886 22.395 22.0075L24.8305 20.6704C25.3887 20.364 26.0817 20.5285 26.4424 21.0531L26.6689 21.3824C27.1083 22.0213 27.8335 22.4027 28.6089 22.4027H29.7048C30.6615 22.4027 31.5156 21.8314 31.8809 20.9472L32.5331 19.3687C32.8986 18.484 32.8114 17.4728 32.3 16.6636L31.8081 15.8853C31.8721 15.8846 31.9359 15.8826 32 15.8826C33.7121 15.8826 35.3874 16.1215 36.9889 16.5812L36.0778 17.3602C35.49 17.8629 35.3004 18.7068 35.6168 19.4126C36.0042 20.2768 37.0291 20.6801 37.9016 20.3118L38.2887 20.1483C38.5092 20.0551 38.7676 20.1098 38.9315 20.2843C39.0517 20.4122 39.1064 20.5852 39.0818 20.7589C39.0571 20.9326 38.9563 21.0835 38.8053 21.1729L34.9129 23.4761C34.0191 24.005 33.4638 24.9787 33.4638 26.0172V26.4729C33.4638 27.4695 34.0932 28.3215 34.9751 28.6533C34.0523 29.4225 33.4638 30.5798 33.4638 31.8722C33.4638 34.1825 35.3434 36.062 37.6536 36.062H38.1734C38.8544 36.062 39.4083 36.616 39.4083 37.297V43.7515C39.4083 44.8582 40.3086 45.7584 41.4152 45.7584C42.1363 45.7584 42.8052 45.3688 43.1609 44.7416L47.6228 36.8739C48.0913 36.0478 48.2096 35.0888 47.9559 34.1735L47.5976 32.8811L47.8894 32.9121C48.6109 32.9886 49.338 32.793 49.9237 32.3727C49.9641 32.8676 49.9858 33.3663 49.9858 33.8684C49.9858 38.6727 48.115 43.1893 44.7179 46.5864Z" fill="#0A0615"/>
-//               <defs>
-//               <linearGradient id="paint0_linear_741_850" x1="32" y1="2" x2="32" y2="66" gradientUnits="userSpaceOnUse">
-//               <stop stop-color="white"/>
-//               <stop offset="1" stop-color="#D8D0FA"/>
-//               </linearGradient>
-//               </defs>
-//               </svg>
-//             </div>
-//             <h3 className="text-[30px] lg:text-[56px] font-normal text-primary mb-5 font-Poppins">120%</h3>
-//             <p className="text-xl text-[#818181] mb-3 font-Poppins">
-//               Average increase in client engagement in the first 6 months
-//             </p>
-//             <img src={staticCardImage} alt="Profile" className="w-full h-auto" />
-//           </div>
-
-//           {/* Video Card */}
-//           <div className="max-w-[100%] lg:max-w-[512px] w-full relative rounded-xl overflow-hidden">
-//             <img
-//               src={vedioImage}
-//               alt="Video thumbnail"
-//               className="w-full h-auto"
-//             />
-//             <div className="bg-white  mt-10 flex flex-col gap-4">
-//               <div className='flex gap-4'>
-//                 <div>
-//                     <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                     <circle cx="15.5" cy="15.5" r="15.5" fill="#0A0615"/>
-//                     <path d="M18.1173 16.8564L26.9565 15.1778L18.0602 13.6172L20.4918 9.99513L17.0876 12.4982L15.4858 3.36963L13.9697 12.5569L10.4797 9.99504L12.8827 13.6171L4.04346 15.1777L12.8827 16.8563L10.4797 20.331L13.9697 17.8573L15.4858 26.9566L17.1162 17.9165L20.4918 20.3312L18.1173 16.8564Z" fill="white"/>
-//                     </svg>
-                  
-              
-//                 </div>
-//                 <p  className="text-xl text-[#818181] font-normal font-Poppins">
-//                 With 4+ years of experience, I specialize in creating intuitive, user-focused
-//                     designs that solve real-world problems and deliver seamless digital experiences.
-//                   </p>
-//               </div>
-
-//               <div className='flex gap-4'>
-//                 <div>
-//                     <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-//                     <circle cx="15.5" cy="15.5" r="15.5" fill="#0A0615"/>
-//                     <path d="M18.1173 16.8564L26.9565 15.1778L18.0602 13.6172L20.4918 9.99513L17.0876 12.4982L15.4858 3.36963L13.9697 12.5569L10.4797 9.99504L12.8827 13.6171L4.04346 15.1777L12.8827 16.8563L10.4797 20.331L13.9697 17.8573L15.4858 26.9566L17.1162 17.9165L20.4918 20.3312L18.1173 16.8564Z" fill="white"/>
-//                     </svg>
-//                 </div>
-//                 <p className="text-xl text-[#818181] font-normal font-Poppins">
-//                   I thrive on working closely with clients, blending creativity with strategy to bring
-//                   their vision to life through thoughtful, impactful design solutions.
-//                 </p>
-//               </div>
-              
-//             </div>
-//           </div>
-//       </div>
-//     </section>
-//   )
-// }
