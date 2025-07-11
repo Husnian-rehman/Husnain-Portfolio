@@ -6,7 +6,6 @@ import Tangibleimage from "../tangiblewords.png";
 import Natureimage from "../naturekast.png";
 import Skillsimage from "../skills2evolve.png";
 import Trendimage from "../Trend.png";
-import { Link } from "react-router-dom";
 
 const data = [
   {

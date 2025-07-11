@@ -115,7 +115,7 @@ const AboutMe = () => {
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-center  gap-8 md:gap-16 md:mb-[100px] mb-[50px]">
-          <div className='relative md:w-[40%]'>
+          <div className='relative md:w-[40%]'  data-aos="fade-right" data-aos-delay="200">
               <img
               src={BlackSuitImage}
               alt="profile"
@@ -123,7 +123,7 @@ const AboutMe = () => {
             />
             <div className='bg-default absolute bottom-0 w-full h-[80%] rounded-t-[50%] right-0'></div>
           </div>
-        <div className='md:w-[60%] flex flex-col items-start gap-10'>
+        <div className='md:w-[60%] flex flex-col items-start gap-10'   data-aos="fade-left" data-aos-delay="400">
             <p className=" text-txtblack text-left xl:text-[24px] lg:text-[20px] text-[16px]">
               A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions.Their canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs.In this digital atelier, they don the mantle of problem solvers, confronting bugs and glitches like valiant knights in an ever-evolving quest for perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code. designs.In this digital atelier.
             </p>
@@ -140,7 +140,7 @@ const AboutMe = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3  md:grid-cols-5 gap-6 max-w-[1100px] m-auto">
           {skillsData.map((skill, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center"  data-aos="zoom-in-up" data-aos-delay={index * 100}>
              <div className="w-36 h-36 mx-auto relative mb-6">
                 <svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
                   <circle cx="60" cy="60" r="52" stroke="#444" strokeWidth="8" fill="none" />

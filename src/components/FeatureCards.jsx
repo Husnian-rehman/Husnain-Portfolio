@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 // Define the card data as an array of objects
 const serviceCards = [
   {
@@ -75,7 +73,7 @@ const serviceCards = [
 const ServiceCard = ({ title, description, icon }) => {
   return (
     <div className="feature-card cursor-pointer flex flex-col group items-center backdrop-blur-[32px] bg-bgblack transition-all ease-in-out duration-700 rounded-xl p-5 lg:p-10 relative hover:animate-vibrate">
-      <div className='w-0 h-0 bg-default transition-all ease-in-out duration-700 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:w-full group-hover:h-full absolute top-0 left-0 z-[1] rounded-xl'></div>
+      <div className='w-0 h-0 bg-gradient-to-r from-[#E46400] to-[#ff0055] transition-all ease-in-out duration-700 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:w-full group-hover:h-full absolute top-0 left-0 z-[1] rounded-xl'></div>
       <div className="svg-col mb-[10px] text-default relative z-[2] group-hover:text-white transition-all ease-in-out duration-500">
         {icon}
       </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import BannerImage from '../banner-imag.png'; 
-import BannerImagebg from '../bannerbgfull.png'; 
 export default function Hero() {
   return (
     <div className='relative bg-black'>

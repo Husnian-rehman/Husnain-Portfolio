@@ -1,26 +1,26 @@
-// src/components/HeroSection.jsx
-
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
 import Pick from '../banner-mian.png';
+
 const HeroSection = () => {
   return (
-    <div className=" pt-28  md:h-screen flex ">
-        <div className="max-w-[1400px] gap-10 w-full m-auto  text-white flex flex-col md:flex-row items-center justify-between px-4 ">
+    <div className="pt-28 flex">
+      <div className="max-w-[1400px] gap-10 w-full m-auto text-white flex flex-col md:flex-row items-center justify-between px-4">
+        
         {/* Left Content */}
-        <motion.div
-            className="md:max-w-[550px] w-full"
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-        >
-            <p className="text-[24px] text-[#707070] md:text-left text-center ">Hi I am</p>
-            <h2 className="text-[28px] text-[#959595] mb-4 md:text-left text-center font-semibold">Husnain Rehman</h2>
-            <h1 className="lg:text-[70px] mb-5 text-[45px] font-bold bg-gradient-to-r from-[#E46400] to-[#ff0055] text-transparent bg-clip-text leading-[1.4] md:text-left text-center">UI/UX Designer</h1>
+        <div className="md:max-w-[550px] w-full" data-aos="fade-right" data-aos-duration="1200">
+          <p className="text-[24px] text-[#707070] md:text-left text-center" data-aos="fade-up" data-aos-delay="200">Hi I am</p>
+          <h2 className="text-[28px] text-[#959595] mb-4 md:text-left text-center font-semibold" data-aos="fade-up" data-aos-delay="300">Husnain Rehman</h2>
+          <h1
+            className="lg:text-[70px] mb-5 text-[45px] font-bold bg-gradient-to-r from-[#E46400] to-[#ff0055] text-transparent bg-clip-text leading-[1.4] md:text-left text-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            UI/UX Designer
+          </h1>
 
-             {/* Social Icons */}
-            <div className="flex gap-4 text-xl md:justify-start justify-center mb-[40px]">
+          {/* Social Icons */}
+            <div className="flex gap-4 text-xl md:justify-start justify-center mb-[40px]"  data-aos="fade-up" data-aos-delay="500">
                 <Link to="https://www.instagram.com/husnainrehmanbilag/" className="w-[40px] text-white h-[40px] rounded-full bg-bgblack  hover:bg-default flex items-center justify-center border border-1 border-[#575757] transition-all ease-in-out duration-500">
                     <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
@@ -61,53 +61,43 @@ const HeroSection = () => {
        
             </div> 
 
-            {/* Buttons */}
-            <div className="md:mb-[80px] mb-[50px] flex gap-4 md:justify-start justify-center">
-                <Link to="/" className="bg-default md: text-[14px] font-semibold text-white px-[40px] py-3 rounded-3xl hover:bg-default border border-1 border-[#575757]  transition-all ease-in-out duration-500">
-                    Hire Me
-                </Link>
-                <Link to="/CVDownload" className="md: text-[14px] font-semibold text-white px-[40px] py-3 rounded-3xl hover:bg-default border border-1 border-[#575757]  transition-all ease-in-out duration-500">
-                    Download CV
-                </Link>
-            </div>
-            
+          {/* Buttons */}
+          <div className="md:mb-[80px] mb-[50px] flex gap-4 md:justify-start justify-center" data-aos="fade-up" data-aos-delay="600">
+            <Link to="/" className="bg-default text-[14px] font-semibold text-white px-[40px] py-3 rounded-3xl hover:bg-default border border-[#575757] transition-all">Hire Me</Link>
+            <Link to="/CVDownload" className="text-[14px] font-semibold text-white px-[40px] py-3 rounded-3xl hover:bg-default border border-[#575757] transition-all">Download CV</Link>
+          </div>
 
-            {/* Stats */}
-            <div className="md:m-0 m-auto mt-10 grid grid-cols-3 backdrop-blur-[32px] bg-bgblack rounded-lg px-4 py-5 text-center gap-4 md:max-w-[550px] max-w-[450px]">
+          {/* Stats */}
+          <div className="md:m-0 m-auto mt-10 grid grid-cols-3 backdrop-blur-[32px] bg-bgblack rounded-lg px-4 py-5 text-center gap-4 md:max-w-[550px] max-w-[450px]" data-aos="zoom-in-up" data-aos-delay="700">
             <div className="flex items-start flex-col gap-2 border-[#575757] border-r">
-               <div className="flex items-center" > <CountUp end={5} duration={5} enableScrollSpy scrollSpyOnce className="text-4xl font-bold text-default" />+</div>
-                <p className="text-sm lg:text-[20px] text-white">Experiences</p>
+              <div className="flex items-center">
+                <CountUp end={5} duration={5} enableScrollSpy scrollSpyOnce className="text-4xl font-bold text-default" />+
+              </div>
+              <p className="text-sm lg:text-[20px] text-white">Experiences</p>
             </div>
             <div className="flex items-start flex-col gap-2 border-[#575757] border-r">
-                <div className="flex items-center" > <CountUp end={20} duration={5} enableScrollSpy scrollSpyOnce className="text-4xl font-bold text-default" />+</div>
-                <p className="text-sm lg:text-[20px] text-white">Project done</p>
+              <div className="flex items-center">
+                <CountUp end={20} duration={5} enableScrollSpy scrollSpyOnce className="text-4xl font-bold text-default" />+
+              </div>
+              <p className="text-sm lg:text-[20px] text-white">Project done</p>
             </div>
-            <div className="flex items-start flex-col gap-2 ">
-                 <div className="flex items-center" ><CountUp end={80} duration={5} enableScrollSpy scrollSpyOnce className="text-4xl font-bold text-default" />+</div>
-                <p className="text-sm lg:text-[20px] text-white">Happy Clients</p>
+            <div className="flex items-start flex-col gap-2">
+              <div className="flex items-center">
+                <CountUp end={80} duration={5} enableScrollSpy scrollSpyOnce className="text-4xl font-bold text-default" />+
+              </div>
+              <p className="text-sm lg:text-[20px] text-white">Happy Clients</p>
             </div>
-            </div>
-
-        </motion.div>
+          </div>
+        </div>
 
         {/* Right Image */}
-        <motion.div
-            className="md:max-w-[580px] w-full flex justify-center relative"
-            initial={{ x: 200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-        >
-            <div className=" bg-gradient-to-r from-[#E46400] to-[#ff0055]  absolute bottom-0 right-0 left-0 m-auto z-[1] md:max-w-full max-w-[300px] rounded-full w-full xl:h-[580px] md:h-[500px] h-[300px]  overflow-hidden flex items-center justify-center" style={{ borderRadius: "57% 43% 39% 61% / 43% 49% 51% 57%" }}>
-            </div>
-            <div className=" md:h-[700px] flex relative z-[2]">
-                <img
-                src={ Pick } // replace with your actual image path
-                alt="Profile"
-                className="object-cover h-full"
-            />
-            </div>
-        </motion.div>
+        <div className="md:max-w-[580px] w-full flex justify-center relative" data-aos="fade-left" data-aos-duration="1200">
+          <div className="bg-gradient-to-r from-[#E46400] to-[#ff0055] absolute bottom-0 right-0 left-0 m-auto z-[1] md:max-w-full max-w-[300px] rounded-full w-full xl:h-[580px] md:h-[500px] h-[300px] overflow-hidden flex items-center justify-center" style={{ borderRadius: "57% 43% 39% 61% / 43% 49% 51% 57%" }} />
+          <div className="md:h-[700px] flex relative z-[2]">
+            <img src={Pick} alt="Profile" className="object-cover h-full" />
+          </div>
         </div>
+      </div>
     </div>
   );
 };

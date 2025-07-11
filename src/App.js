@@ -10,15 +10,26 @@ import { Header } from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 
+import AOS from 'aos'; // ✅ Import AOS
+import 'aos/dist/aos.css'; // ✅ Import AOS styles
+
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Loader timer
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500); // 2.5s loader display
+    }, 2500);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // global animation duration (optional)
+      once: true, // animation only once (optional)
+    });
   }, []);
 
   if (loading) {
