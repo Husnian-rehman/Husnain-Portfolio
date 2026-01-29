@@ -1,3 +1,7 @@
+body{
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .splide__pagination {
     bottom: -44px;
     display: flex;
@@ -10,7 +14,7 @@
 
 .splide__pagination__page.is-active,
 .splide__pagination__page {
-    background-color: #754EF9;
+    background-color: #e46400;
     height: 14px;
     border-radius: 50px;
     transform: unset;

@@ -3,7 +3,7 @@ import FeatureCards from '../components/FeatureCards'
 import AboutMe from '../components/AboutMe'
 // import Experience from '../components/Experience'
 // import Hero from '../components/Hero'
-// import Testimonial from '../components/testimonial'
+import Testimonial from '../components/testimonial'
 import Coursetabs from '../components/ProjectsTabs'
 import Hero1 from '../components/Hero1'
 import Contact from '../components/Contact'
@@ -14,9 +14,9 @@ function Home() {
     {/* <Hero /> */}
    <FeatureCards />
    <AboutMe />
-   {/* <Experience />
-   <Testimonial /> */}
+   {/* <Experience /> */}
    < Coursetabs />
+   <Testimonial /> 
    <Contact />
    </div>
   )

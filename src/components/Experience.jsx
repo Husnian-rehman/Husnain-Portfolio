@@ -6,7 +6,7 @@ import experience3 from '../experience 3.png';
 export default function Experience() {
   return (
     <section className="py-12">
-      <div className='max-w-[1460px] m-auto px-5'>
+      <div className='max-w-[1460px] m-auto px-5 text-white'>
             {/* Header */}
             <div className="max-w-[1301px] flex flex-wrap gap-5 justify-between items-start mb-10">
                 <div>
@@ -16,18 +16,18 @@ export default function Experience() {
                     <h2 className="text-[40px] max-w-[441px] font-bold mt-4">Explore My Design Journey</h2>
                 </div>
                 <div className="max-w-[486px] ">
-                    <p className='mb-[28px] text-xl font-Poppins font-normal'>
+                    <p className='mb-[28px] text-xl  font-normal'>
                     Over the past 4+ years, I've had the opportunity to work on a wide range of design
                     projects, collaborating with diverse teams and clients to bring creative visions to life.
                     </p>
                     <div className='flex items-center gap-1'>
                     <Link
                             to="/"
-                            className="text-[22px] text-description font-semibold font-Poppins  underline "
+                            className="text-[22px] text-description font-semibold   underline "
                         >
                             Book a Call  
                         </Link>
-                        <span className='text-[22px] text-description font-semibold font-Poppins'>↗</span>
+                        <span className='text-[22px] text-description font-semibold '>↗</span>
                     </div>
                 </div>
             </div>
@@ -35,14 +35,14 @@ export default function Experience() {
             {/* Experience Item 1 */}
             <div className="flex flex-wrap gap-6 justify-between items-start mb-6 pb-6 border-b border-[#F7F6FB]">
                 <div>
-                    <h3 className="font-medium text-[22px] mb-1  text-primary ">Creative Minds, New York, USA</h3>
-                    <p className="flex gap-2 items-center text-lg font-normal font-Poppins text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <h3 className="font-medium text-[22px] mb-1   ">Creative Minds, New York, USA</h3>
+                    <p className="flex gap-2 items-center text-lg font-normal  text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.21339 8.57685L15 7.50936L9.17607 6.51687L10.7679 4.21345L8.53936 5.80528L7.49069 0L6.4982 5.8426L4.21348 4.21339L5.78661 6.51681L0 7.5093L5.78661 8.57679L4.21347 10.7865L6.4982 9.21338L7.49069 15L8.55805 9.251L10.7679 10.7866L9.21339 8.57685Z" fill="#5B5B5B"/>
                         </svg>
                         February 2022 – Present
                     </p>
                 </div>
-                <p className="max-w-[474px] text-[22px] font-Poppins font-normal  text-primary">
+                <p className="max-w-[474px] text-[22px]  font-normal  ">
                 Innovative designs, New York, Senior Product Designer
                 </p>
                 <div className="flex gap-6">
@@ -58,14 +58,14 @@ export default function Experience() {
             {/* Experience Item 2 */}
             <div className="flex flex-wrap gap-6 justify-between items-start mb-6 pb-6 border-b border-[#F7F6FB]">
                         <div>
-                            <h3 className="font-medium text-[22px] mb-1  text-primary ">Creative Minds, New York, USA</h3>
-                            <p className="flex gap-2 items-center text-lg font-normal font-Poppins text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <h3 className="font-medium text-[22px] mb-1   ">Creative Minds, New York, USA</h3>
+                            <p className="flex gap-2 items-center text-lg font-normal  text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.21339 8.57685L15 7.50936L9.17607 6.51687L10.7679 4.21345L8.53936 5.80528L7.49069 0L6.4982 5.8426L4.21348 4.21339L5.78661 6.51681L0 7.5093L5.78661 8.57679L4.21347 10.7865L6.4982 9.21338L7.49069 15L8.55805 9.251L10.7679 10.7866L9.21339 8.57685Z" fill="#5B5B5B"/>
                                 </svg>
                                 February 2022 – Present
                             </p>
                         </div>
-                        <p className="max-w-[474px] text-[22px] font-Poppins font-normal  text-primary">
+                        <p className="max-w-[474px] text-[22px]  font-normal  ">
                         Innovative designs, New York, Senior Product Designer
                         </p>
                         <div className="flex gap-6">
@@ -81,8 +81,8 @@ export default function Experience() {
             {/* Experience Item 2 */}
             <div className="flex flex-wrap gap-6 justify-between items-start mb-6 pb-6 border-b border-[#F7F6FB]">
                     <div>
-                        <h3 className="font-medium text-[22px] mb-1  text-primary ">Creative Minds, New York, USA</h3>
-                        <p className="flex gap-2 items-center text-lg font-normal font-Poppins text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <h3 className="font-medium text-[22px] mb-1   ">Creative Minds, New York, USA</h3>
+                        <p className="flex gap-2 items-center text-lg font-normal  text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.21339 8.57685L15 7.50936L9.17607 6.51687L10.7679 4.21345L8.53936 5.80528L7.49069 0L6.4982 5.8426L4.21348 4.21339L5.78661 6.51681L0 7.5093L5.78661 8.57679L4.21347 10.7865L6.4982 9.21338L7.49069 15L8.55805 9.251L10.7679 10.7866L9.21339 8.57685Z" fill="#5B5B5B"/>
                             </svg>
                             February 2022 – Present
@@ -100,7 +100,7 @@ export default function Experience() {
             </div>
 
             {/* Experience Item 3 with Images */}
-            <div className="bg-white  mb-6 pb-6 border-b border-[#F7F6FB]">
+            {/* <div className="bg-white  mb-6 pb-6 border-b border-[#F7F6FB]">
                 <div className="flex flex-wrap items-center gap-8 mt-4">
                     <div className='flex gap-5 flex-wrap'>
                     <div className='flex w-full sm:w-fit'>
@@ -114,7 +114,7 @@ export default function Experience() {
                     </div>
                     </div>
                     <div className='max-w-[688px] w-full flex gap-5 flex-wrap'>
-                    <p className="max-w-[520px] text-xl font-Poppins font-normal  text-description">
+                    <p className="max-w-[520px] text-xl  font-normal  text-description">
                             Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.
                             </p>
                             <Link to="/" className="xl:ml-auto bg-purple-600 text-white p-3 rounded-full">
@@ -125,19 +125,19 @@ export default function Experience() {
                             </Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Experience Item 4 */}
             <div className="flex flex-wrap gap-6 justify-between items-start mb-6 pb-6 border-b border-[#F7F6FB]">
                         <div>
-                            <h3 className="font-medium text-[22px] mb-1  text-primary ">Creative Minds, New York, USA</h3>
-                            <p className="flex gap-2 items-center text-lg font-normal font-Poppins text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <h3 className="font-medium text-[22px] mb-1   ">Creative Minds, New York, USA</h3>
+                            <p className="flex gap-2 items-center text-lg font-normal  text-description"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.21339 8.57685L15 7.50936L9.17607 6.51687L10.7679 4.21345L8.53936 5.80528L7.49069 0L6.4982 5.8426L4.21348 4.21339L5.78661 6.51681L0 7.5093L5.78661 8.57679L4.21347 10.7865L6.4982 9.21338L7.49069 15L8.55805 9.251L10.7679 10.7866L9.21339 8.57685Z" fill="#5B5B5B"/>
                                 </svg>
                                 February 2022 – Present
                             </p>
                         </div>
-                        <p className="max-w-[474px] text-[22px] font-Poppins font-normal  text-primary">
+                        <p className="max-w-[474px] text-[22px]  font-normal  ">
                         Innovative designs, New York, Senior Product Designer
                         </p>
                         <div className="flex gap-6">
