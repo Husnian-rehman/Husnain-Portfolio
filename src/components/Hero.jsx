@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import BannerImage from '../banner-imag.png'; 
+import BannerImage from '../husnain.png'; 
 export default function Hero() {
   return (
     <div className='relative bg-black'>
@@ -19,10 +19,10 @@ export default function Hero() {
                 <h1 className='text-[40px] mb-3 xl:text-[90px] font-Neue   bg-gradient-to-r from-[#E46400] to-[#ff0055] text-transparent bg-clip-text'>Web Developer</h1>
                 <p className='mb-10 text-2xl text-txtblack font-Neue '>100 % Html5 Bootstrap5 Templates Made By Husnain.</p>
                 <div className='flex flex-wrap sm:flex-nowrap gap-8'>
-                    <Link to="/" className="w-fit px-[32px] py-[12px] text-[15px] lg:text-[18px] flex gap-[10px] items-center font-medium hover:text-white text-primary hover:bg-featuretext  bg-white border  rounded-[42px] transition-all ease-in-out duration-700">
+                    <Link to="/" className="w-fit px-[32px] py-[12px] text-[15px] lg:text-[18px] flex gap-[10px] items-center font-medium hover:text-white text-primary hover:bg-[#e46400]  bg-white border  rounded-[42px] transition-all ease-in-out duration-700">
                                 Get Started
                                 </Link>
-                    <Link to="/" className="w-fit px-[32px] py-[12px]  text-[15px] lg:text-[18px] flex gap-[10px] items-center font-medium hover:text-white text-primary hover:bg-featuretext bg-white border   rounded-[42px] transition-all ease-in-out duration-700">
+                    <Link to="/" className="w-fit px-[32px] py-[12px]  text-[15px] lg:text-[18px] flex gap-[10px] items-center font-medium hover:text-white text-primary hover:bg-[#e46400] bg-white border   rounded-[42px] transition-all ease-in-out duration-700">
                                 View Portfolio
                             </Link>
                 </div>
@@ -36,7 +36,7 @@ export default function Hero() {
                 <ul className='flex gap-3'>
                     <li> 
                         <Link
-                            to="/"
+                            to="https://www.facebook.com/husnainrehman.bilag"
                         className="text-featuretext font-bold"
                         >
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -47,19 +47,7 @@ export default function Hero() {
                     </li>
                     <li>
                     <Link
-                            to="/"
-                        className="text-featuretext font-bold"
-                        >
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/>
-                        </svg>
-        
-                        </Link>
-                    
-                    </li>
-                    <li>
-                    <Link
-                            to="/portfolio"
+                            to="https://www.linkedin.com/in/husnain-rehman-8833b4320/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people%3B5FLvsqtAQrSR4%2Fo2VmE7jg%3D%3D"
                         className="text-featuretext font-bold"
                         >
                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
