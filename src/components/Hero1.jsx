@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
-import Pick from '../banner-mian.png';
+import Pick from '../husnain (2).png';
 
 const HeroSection = () => {
   return (

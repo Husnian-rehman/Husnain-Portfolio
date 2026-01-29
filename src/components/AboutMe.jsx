@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import BlackSuitImage from '../man-w-black-suit.png';
+import BlackSuitImage from '../husnain.png';
 import { Link } from 'react-router-dom';
 
 const skillsData = [
