@@ -94,7 +94,7 @@ export default function FeatureCards() {
       <div className="px-5 max-w-[1400px] m-auto">
         <span className='block text-center mb-5 md:text-[40px] text-[20px] font-bold text-white'>My Services</span>
         <p className='text-center text-txtblack mb-8 md:mb-16 text-[16px] md:text-[20px] font-semibold'>
-          Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam
+          Delivering creative solutions that transform ideas into impactful results.
         </p>
         
         <div className="feature-inner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 text-center">
